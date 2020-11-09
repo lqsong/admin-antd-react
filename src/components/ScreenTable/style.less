@@ -1,0 +1,27 @@
+.main-conent-screen {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 48px - 50px);
+  border-radius: 4px;
+  background-color: #fff;
+  .screen-header {
+    padding: 20px;
+    min-height: 33px;
+  }
+  .screen-footer {
+    padding: 20px;
+    min-height: 32px;
+    text-align: right;
+  }
+  .screen-conent {
+    flex: 1;
+    padding: 0 20px;
+    overflow: hidden;
+  }
+  .screen-padding {
+    padding-top: 20px;
+  }
+  :global(.ant-table.ant-table-bordered > .ant-table-container) {
+    border-bottom: 1px solid #f0f0f0;
+  }
+}

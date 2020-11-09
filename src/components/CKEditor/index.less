@@ -1,0 +1,30 @@
+.document-editor {
+  border: 1px solid var(--ck-color-base-border);
+  border-radius: var(--ck-border-radius);
+
+  /* Set vertical boundaries for the document editor. */
+  /* max-height: 700px; */
+
+  /* This element is a flex container for easier rendering. */
+  display: flex;
+  flex-flow: column nowrap;
+
+  :global(.ck.ck-toolbar) {
+    /* Make sure the toolbar container is always above the editable. */
+    z-index: 1;
+
+    /* Create the illusion of the toolbar floating over the editable. */
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+
+    /* Use the CKEditor CSS variables to keep the UI consistent. */
+    border-bottom: 1px solid var(--ck-color-toolbar-border);
+
+    border: 0;
+    border-radius: 0;
+  }
+
+  :global(.ck-content) {
+    min-height: 300px;
+    line-height: normal;
+  }
+}
