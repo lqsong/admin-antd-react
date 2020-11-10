@@ -5,6 +5,7 @@
 | **[http://demo.admin-antd-react.liqingsong.cc](http://demo.admin-antd-react.liqingsong.cc/)**             |
 :-------------------------:
 | ![Home](https://gitee.com/lqsong/public/raw/master/admin-antd-react/home.png)  |
+| ![Home](https://gitee.com/lqsong/public/raw/master/admin-antd-react/home2.png)  |
 
 
 

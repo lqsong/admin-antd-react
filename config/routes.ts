@@ -16,7 +16,7 @@ import IndexLayoutRoutes from '../src/layouts/IndexLayout/routes';
 
 /**
  * config routes 配置
- * umi routes: https://umijs.org/docs/routing
+ * docs: http://admin-antd-react.liqingsong.cc/guide/basis/router-and-menu.html
  */
 export const routes: RoutesDataItem[] = [
   {

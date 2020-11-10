@@ -11,9 +11,9 @@ export interface RoutesDataItem {
   icon?: string;
   // 权限控制，页面角色(您可以设置多个角色)
   roles?: string[];
-  // 标题，路由在菜单、浏览器title 或 面包屑中展示的文字
+  // 标题，路由在菜单、浏览器title 或 面包屑中展示的文字，目前可以使用locales
   title: string;
-  // 路由地址
+  // 路由地址或外链
   path: string;
   // 跳转地址
   redirect?: string;
@@ -37,7 +37,7 @@ export interface RoutesDataItem {
   /**
    * 所属顶级菜单,当顶级菜单存在时，用于选中顶部菜单，与侧栏菜单切换
    *   1、三级路由此参数的作用是选中顶级菜单
-   *   2、二级路由此参数的作用是所属某个顶级菜单的下面，两个层级的必须同时填写一致
+   *   2、二级路由此参数的作用是所属某个顶级菜单的下面，两个层级的必须同时填写一致，如果path设置的是外链，此参数必填
    *   3、(默认不设置 path.split('/')[0])，此参数是为了满足特殊页面特殊需求
    */
   belongTopMenu?: string;
