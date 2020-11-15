@@ -1,5 +1,5 @@
 import localforage from 'localforage';
-import settings from '@/../config/settings';
+import settings from '@/config/settings';
 
 /**
  * 获取本地Token

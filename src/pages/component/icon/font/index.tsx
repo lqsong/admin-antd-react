@@ -8,7 +8,7 @@ const IconFontPage: React.FC<IconFontPageProps> = () => {
     <div className="indexlayout-main-conent">
       <Card bordered={false}>
         <Alert
-          message="使用此组件需要配置 ‘/config/settings.ts’ 中 ‘iconfontUrl’ 参数。"
+          message="使用此组件需要配置 ‘@/config/settings.ts’ 中 ‘iconfontUrl’ 参数。"
           type="warning"
         />
         <List header={<h2>说明：</h2>}>
@@ -30,7 +30,7 @@ const IconFontPage: React.FC<IconFontPageProps> = () => {
         <List header={<h3>使用方法：</h3>}>
           <List.Item>1、iconfont.cn 上生成 js 资源。</List.Item>
           <List.Item>
-            2、/config/settings.ts 文件中配置 iconfont.cn 生成的js文件地址。
+            2、@/config/settings.ts 文件中配置 iconfont.cn 生成的js文件地址。
           </List.Item>
           <List.Item>
             3、使用Demo：

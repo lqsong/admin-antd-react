@@ -1,5 +1,5 @@
 import { Reducer /* , Effect */ } from 'umi';
-import settings from '@/../config/settings';
+import settings from '@/config/settings';
 
 export interface GlobalModelState {
   // 左侧展开收起

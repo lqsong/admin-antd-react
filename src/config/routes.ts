@@ -1,18 +1,14 @@
-import {
-  RoutesDataItem,
-  umiRoutes,
-  getNotFoundRoute,
-} from '../src/utils/routes';
+import { RoutesDataItem, umiRoutes, getNotFoundRoute } from '../utils/routes';
 
 /**
  * User Layout 路由页面
  */
-import UserLayoutRoutes from '../src/layouts/UserLayout/routes';
+import UserLayoutRoutes from '../layouts/UserLayout/routes';
 
 /**
  * Index Layout 路由页面
  */
-import IndexLayoutRoutes from '../src/layouts/IndexLayout/routes';
+import IndexLayoutRoutes from '../layouts/IndexLayout/routes';
 
 /**
  * config routes 配置

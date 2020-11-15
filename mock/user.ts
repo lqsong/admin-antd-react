@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import settings from '../config/settings';
+import settings from '../src/config/settings';
 const { API_HOST } = process.env;
 const mock = {};
 

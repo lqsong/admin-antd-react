@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import lessToJs from 'less-vars-to-js';
 
-import { routes } from './routes';
+import { routes } from './src/config/routes';
 
 const { API_HOST } = process.env;
 
@@ -39,7 +39,7 @@ export default defineConfig({
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: lessToJs(
     fs.readFileSync(
-      path.join(__dirname, '../src/assets/css/antd-variables.less'),
+      path.join(__dirname, './src/assets/css/antd-variables.less'),
       'utf8',
     ),
   ),

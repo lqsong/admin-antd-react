@@ -1,4 +1,4 @@
-import settings from '../../config/settings';
+import settings from '../config/settings';
 import { isExternal } from './validate';
 
 /**

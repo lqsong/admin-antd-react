@@ -6,7 +6,7 @@
 import { history } from 'umi';
 import { extend } from 'umi-request';
 import { notification } from 'antd';
-import settings from '@/../config/settings';
+import settings from '@/config/settings';
 import { getToken, setToken } from '@/utils/localToken';
 
 export interface ResponseData {

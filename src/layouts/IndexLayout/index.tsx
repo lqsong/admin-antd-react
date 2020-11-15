@@ -13,7 +13,7 @@ import {
   RoutesDataItem,
 } from '@/utils/routes';
 import { mergeUnique as ArrayMergeUnique } from '@/utils/array';
-import settings from '@/../config/settings';
+import settings from '@/config/settings';
 
 import Permission from '@/components/Permission';
 import Left from './components/Left';

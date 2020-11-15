@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { connect, ConnectProps, Helmet } from 'umi';
 
-import settings from '@/../config/settings';
+import settings from '@/config/settings';
 import { getRouteItem, RoutesDataItem } from '@/utils/routes';
 
 import SelectLang from '@/components/SelectLang';
