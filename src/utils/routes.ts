@@ -268,7 +268,7 @@ export const umiRoutes = (
      */
     if (item.redirect && item.routes) {
       newItem.routes = [
-        ...umiRoutes(itemRoutes, newItem.path),
+        ...umiRoutes(itemRoutes, newItem.path, headStart),
         {
           hidden: true,
           title: newItem.title,
@@ -281,7 +281,7 @@ export const umiRoutes = (
       newItem.redirect = redirect;
     } else if (!item.redirect && item.routes) {
       newItem.routes = [
-        ...umiRoutes(itemRoutes, newItem.path),
+        ...umiRoutes(itemRoutes, newItem.path, headStart),
         getNotFoundRoute(),
       ];
     } /*  else {
