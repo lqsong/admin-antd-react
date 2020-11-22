@@ -72,11 +72,16 @@ const UserModel: UserModelType = {
         return false;
       }
     },
-    *logout(_, { call }) {
+    *logout(_, { call, put }) {
       const { location } = history;
       const { pathname, search } = location;
       yield call(removeToken);
-
+      yield put({
+        type: 'saveCurrentUser',
+        payload: {
+          ...initState.currentUser,
+        },
+      });
       if (pathname !== '/user/login') {
         history.replace({
           pathname: '/user/login',
