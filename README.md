@@ -17,6 +17,17 @@
  - [Github](https://github.com/lqsong/admin-antd-react) 
  - [Gitee](https://gitee.com/lqsong/admin-antd-react)
 
+
+## 后台前端解决方案列表
+
+ - admin-element-vue（[GitHub](https://github.com/lqsong/admin-element-vue)、[Gitee](https://gitee.com/lqsong/admin-element-vue)）
+ - admin-antd-vue（[GitHub](https://github.com/lqsong/admin-antd-vue)、[Gitee](https://gitee.com/lqsong/admin-antd-vue)）
+ - admin-antd-react（[GitHub](https://github.com/lqsong/admin-antd-react)、[Gitee](https://gitee.com/lqsong/admin-antd-react)）
+ - electron-admin-element-vue（[GitHub](https://github.com/lqsong/electron-admin-element-vue)、[Gitee](https://gitee.com/lqsong/electron-admin-element-vue)）
+ - electron-admin-antd-vue（[GitHub](https://github.com/lqsong/electron-admin-antd-vue)、[Gitee](https://gitee.com/lqsong/electron-admin-antd-vue)）
+ - electron-admin-antd-react（[GitHub](https://github.com/lqsong/electron-admin-antd-react)、[Gitee](https://gitee.com/lqsong/electron-admin-antd-react)）
+
+
 ## 功能
 
 ```
@@ -65,7 +76,7 @@
 ## 自定义配置
 
 ### **(建议)** 本地或开发模式下，不要直接修改 '.env'
-复制 '.env' 重命名为 ' .env.local' , 修改对应的参数.
+复制 '.env' 重命名为 '.env.local' , 启用修改对应的参数.
 
 ## 项目设置
 
@@ -121,7 +132,7 @@ $ npm run svgo
 
 ## 捐赠
 
-如果你觉得这个项目帮助到了你，你可以请作者喝咖啡表示鼓励.
+如果你觉得这个项目帮助到了你，请帮助点击 Star，你也可以请作者喝咖啡表示鼓励.
 
 **ALIPAY**             |  **WECHAT**
 :-------------------------:|:-------------------------:
