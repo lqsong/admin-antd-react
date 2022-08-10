@@ -1,4 +1,6 @@
-# admin-antd-react
+# admin-antd-react-umijs
+
+此分支是 Webpack + UmiJS + React + Ant Design 版本 ， Vite 版本请查看 v2.0-vite (分支)（[github](https://github.com/lqsong/admin-antd-react/tree/v2.0-vite)、[gitee](https://gitee.com/lqsong/admin-antd-react/tree/v2.0-vite)）
 
 ## Demo
 
