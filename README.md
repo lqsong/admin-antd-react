@@ -1,13 +1,14 @@
-# admin-antd-react
+# admin-antd-react-vite
+
+此分支是 Vite + React 18 + Ant Design + Recoil 版本 ， Webpack UmiJS 版本请查看 v1.0-umijs (分支)（[github](https://github.com/lqsong/admin-antd-react/tree/v1.0-umijs)、[gitee](https://gitee.com/lqsong/admin-antd-react/tree/v1.0-umijs)）
 
 ## Demo
 
 **注意：Demo 用的是在线mock服务，不稳定，若在线登录不了pull到本地可直接运行查看demo**
 
-| **[http://demo.admin-antd-react.liqingsong.cc](http://demo.admin-antd-react.liqingsong.cc/)**             |
+| **[http://vite-demo.admin-antd-react.liqingsong.cc](http://vite-demo.admin-antd-react.liqingsong.cc/)**             |
 :-------------------------:
-| ![Home](https://gitee.com/lqsong/public/raw/master/admin-antd-react/home.png)  |
-| ![Home](https://gitee.com/lqsong/public/raw/master/admin-antd-react/home2.png)  |
+| ![Home](http://admin-antd-react.liqingsong.cc/v2_vite/images/home.png)  |
 
 
 
@@ -45,7 +46,6 @@
 
 - 全局功能
   - 国际化多语言
-  - 动态顶级菜单（支持设置是否启用）
   - 动态侧边栏（支持多级路由嵌套）
   - 动态面包屑（支持自定义配置）
   - Svg Sprite 图标
@@ -59,8 +59,6 @@
       - tui-editor
     - 图标
       - IconSvg
-      - IconFont
-      - IconAntd
   - 页面示例
     - 列表页面
       - 标准列表
@@ -80,59 +78,41 @@
 
 ## 自定义配置
 
-### **(建议)** 本地或开发模式下，不要直接修改 '.env'
-复制 '.env' 重命名为 '.env.local' , 启用修改对应的参数.
+### **(建议)** 本地或开发模式下，不要直接修改 '.env.development'
+复制 '.env.development' 重命名为 '.env.development.local' , 启用修改对应的参数.
+
+### **(建议)** 生产模式下，不要直接修改 '.env.production'
+复制 '.env.production' 重命名为 ' .env.production.local' , 修改对应的参数.
+
 
 ## 项目设置
 
 ### 一、Install dependencies,
 
-```bash
-$ yarn
-```
-
-or
 
 ```
-$ npm install
+$ pnpm install
 ```
 
-> 推荐使用 yarn , **[yarn安装与常用命令](http://liqingsong.cc/article/detail/9)** 。
+ 推荐使用 pnpm , **[pnpm的安装与使用](http://liqingsong.cc/article/detail/26)** 。
 
 ### 二、Start the dev server,
 
-```bash
-$ yarn start
 ```
-
-or
-
-```
-$ npm run start
+$ pnpm run dev
 ```
 
 
 ### 三、Compiles and minifies for production
 
-```bash
-$ yarn build
 ```
-or
-
-```
-$ npm run build
+$ pnpm run build
 ```
 
 ### 四、精简 svg icon
 
 ```
-$ yarn svgo
-```
-
-or
-
-```
-$ npm run svgo
+$ pnpm run svgo
 ```
 
 ## 捐赠
