@@ -20,7 +20,7 @@
 
 基于 Webpack + UmiJS + React + Ant Design 构建的 Admin
 
- - [github](https://github.com/lqsong/admin-antd-react/tree/v1.0-umijs
+ - [github](https://github.com/lqsong/admin-antd-react/tree/v1.0-umijs)
  - [gitee](https://gitee.com/lqsong/admin-antd-react/tree/v1.0-umijs)
 
 
