@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { /* Outlet, */ useLocation } from 'react-router-dom';
 
 import { useRecoilValue } from 'recoil';
 import { useI18n } from '@/store/i18n';
@@ -15,7 +15,11 @@ import layoutRotes from './routes';
 
 import './css/index.less';
 
-export default memo(() => {
+export interface UserLayoutProps {
+  children: React.ReactNode;
+}
+
+export default memo(({ children }: UserLayoutProps) => {
   const location = useLocation();
 
   const t = useRecoilValue(useI18n(locales));
@@ -34,7 +38,8 @@ export default memo(() => {
       <div className='lang'>
         <SelectLang />
       </div>
-      <Outlet />
+      {/* <Outlet /> */}
+      {children}
     </div>
   );
 });

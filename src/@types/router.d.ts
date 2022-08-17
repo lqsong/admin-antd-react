@@ -2,7 +2,14 @@
  * 路由 ts定义
  * @author LiQingSong
  */
-import { Location } from 'react-router-dom';
+import { Location, RouteObject } from 'react-router-dom';
+
+/**
+ * json path key RouteObject路由类型
+ */
+export interface IPathKeyRouteObject {
+  [path: string]: RouteObject;
+}
 
 /**
  * 面包屑类型

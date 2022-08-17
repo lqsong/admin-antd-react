@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 
@@ -53,7 +53,9 @@ export default memo(({ menuData, jsonMenuData, routeItem, userRoles = [], breadC
               <BreadCrumbs className='breadcrumb' list={breadCrumbs} />
             </div>
             <div className='universallayout-top-menu-right'>
-              <RightTopMessage />
+              <Suspense fallback={<>...</>}>
+                <RightTopMessage />
+              </Suspense>
               <RightTopUser />
               <SelectLang className='universallayout-top-selectlang' />
               <Settings />
@@ -77,7 +79,9 @@ export default memo(({ menuData, jsonMenuData, routeItem, userRoles = [], breadC
               />
             </div>
             <div className='universallayout-top-menu-right'>
-              <RightTopMessage />
+              <Suspense fallback={<>...</>}>
+                <RightTopMessage />
+              </Suspense>
               <RightTopUser />
               <SelectLang className='universallayout-top-selectlang' />
               <Settings />

@@ -1,8 +1,7 @@
 import { memo } from 'react';
-import { Outlet } from 'react-router-dom';
 
-export default memo(() => (
-  <>
-    <Outlet />
-  </>
-));
+export interface BlankLayoutProps {
+  children: React.ReactNode;
+}
+
+export default memo(({ children }: BlankLayoutProps) => <>{children}</>);

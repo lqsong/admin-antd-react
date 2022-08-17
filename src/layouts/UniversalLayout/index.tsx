@@ -1,5 +1,5 @@
-import { memo, useEffect, useMemo } from 'react';
-import { Outlet, useLocation } from 'react-router-dom';
+import { memo, useMemo } from 'react';
+import { /* Outlet, */ useLocation } from 'react-router-dom';
 import classnames from 'classnames';
 
 import { useRecoilValue } from 'recoil';
@@ -20,7 +20,11 @@ import useTitle from '@/hooks/useTitle';
 
 import './css/index.less';
 
-export default memo(() => {
+export interface UniversalLayoutProps {
+  children: React.ReactNode;
+}
+
+export default memo(({ children }: UniversalLayoutProps) => {
   const location = useLocation();
 
   const t = useRecoilValue(useI18n(locales));
@@ -46,10 +50,6 @@ export default memo(() => {
   // 设置title
   useTitle(t(routeItem?.meta?.title || ''));
 
-  useEffect(() => {
-    console.log('location', location, routeItem);
-  }, [location]);
-
   return (
     <div id='universallayout' className={classnames({ light: global.theme === 'light' })}>
       {global.navMode === 'inline' && (
@@ -72,7 +72,8 @@ export default memo(() => {
         />
         <div id='universallayout-right-main'>
           <Permission role={routeItem?.meta?.roles}>
-            <Outlet />
+            {/* <Outlet /> */}
+            {children}
           </Permission>
           <RightFooter />
         </div>

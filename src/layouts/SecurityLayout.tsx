@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect, useMemo } from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { message } from 'antd';
 import { useRecoilState } from 'recoil';
 import { userState, CurrentUser } from '@/store/user';
@@ -9,7 +9,11 @@ import PageLoading from '@/components/PageLoading';
 import { ResponseData } from '@/utils/request';
 import { queryCurrent } from '@/services/user';
 
-export default memo(() => {
+export interface SecurityLayoutProps {
+  children: React.ReactNode;
+}
+
+export default memo(({ children }: SecurityLayoutProps) => {
   const navigate = useNavigate();
   const [user, setUser] = useRecoilState(userState);
 
@@ -40,5 +44,5 @@ export default memo(() => {
   useEffect(() => {
     getUser();
   }, []);
-  return <>{isLogin ? <Outlet /> : <PageLoading />}</>;
+  return <>{isLogin ? children : <PageLoading />}</>;
 });

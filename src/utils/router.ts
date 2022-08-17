@@ -9,7 +9,14 @@ import { merge } from 'lodash/fp';
 import qs from 'query-string';
 import { isExternal } from '@/utils/validate';
 import { equalObject } from '@/utils/object';
-import { IRouter, IPathKeyRouter, IRouterPathKeyRouter, BreadcrumbType, TabNavType } from '@/@types/router';
+import {
+  IRouter,
+  IPathKeyRouter,
+  IRouterPathKeyRouter,
+  BreadcrumbType,
+  TabNavType,
+  IPathKeyRouteObject,
+} from '@/@types/router';
 
 /**
  * 根据 configRoutes: IRouter[] 生成 useRoutes 的参数 routes: RouteObject[] 的数据
@@ -22,6 +29,10 @@ export const createUseRoutes = (configRoutes: IRouter[], parentPath = '/'): Rout
   const routes: RouteObject[] = [];
   for (let index = 0; index < configRoutes.length; index++) {
     const item = configRoutes[index];
+    if (isExternal(item.path)) {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
     const routesItem: RouteObject = {};
 
     // path
@@ -52,6 +63,27 @@ export const createUseRoutes = (configRoutes: IRouter[], parentPath = '/'): Rout
   }
 
   return routes;
+};
+
+/**
+ * createUseRoutes处理后的数据转成 IPathKeyRouteObject 格式
+ * @param routes  RouteObject[] 经过 createUseRoutes 处理后的routes
+ * @returns IPathKeyRouteObject
+ * @author LiQingSong
+ */
+export const pathKeyCreateUseRoutes = (routes: RouteObject[]): IPathKeyRouteObject => {
+  let jsonItems: IPathKeyRouteObject = {};
+  for (let index = 0; index < routes.length; index++) {
+    const item = routes[index];
+    jsonItems[item.path || ''] = {
+      ...item,
+    };
+
+    if (item.children) {
+      jsonItems = merge(jsonItems, pathKeyCreateUseRoutes(item.children));
+    }
+  }
+  return jsonItems;
 };
 
 /**
