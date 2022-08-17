@@ -51,6 +51,9 @@
     "vite-plugin-mock": "^2.9.6",
     "vite-plugin-svg-icons": "^2.0.1"
   },
+  "engines": {
+    "node": ">= 14.18.0"
+  },
   "keywords": [
     "react",
     "typescript",
