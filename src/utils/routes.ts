@@ -340,10 +340,10 @@ export const getPermissionMenuData = (
 ): RoutesDataItem[] => {
   const menu: RoutesDataItem[] = [];
   for (let index = 0, len = routes.length; index < len; index += 1) {
-    const element = routes[index];
+    const element = { ...routes[index] };
     if (hasPermission(roles, element)) {
       if (element.routes) {
-        element.routes = getPermissionMenuData(roles, element.routes);
+        element.routes = getPermissionMenuData(roles, [...element.routes]);
       }
       menu.push(element);
     }
